@@ -17,7 +17,7 @@ import Profil from "../screens/ProfilScreen";
 
 export type RootStackParamList = {
   Splash: undefined;
-  Login: undefined;
+  Login: { fadeIn?: boolean } | undefined;
   Daftar: undefined;
   Welcome: undefined;
   PilihCara: undefined;
