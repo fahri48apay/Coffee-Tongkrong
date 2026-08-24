@@ -22,7 +22,7 @@ type TextFieldProps = {
   placeholder: string;
   secure?: boolean;
   keyboardType?: "default" | "email-address";
-  autoComplete?: "email" | "password";
+  autoComplete?: "email" | "password" | "name";
   inputRef?: React.RefObject<TextInput | null>;
   onSubmitEditing?: () => void;
   style?: StyleProp<ViewStyle>;

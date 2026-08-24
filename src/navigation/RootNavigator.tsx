@@ -52,15 +52,25 @@ export default function RootNavigator() {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Splash" component={Splash} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Daftar" component={Daftar} />
-        <Stack.Screen name="Welcome" component={Welcome}
-          options={{ animation: "slide_from_bottom" }} // wiring §3: push up 300
+        <Stack.Screen name="Login" component={Login}
+          options={{ animation: "fade" }} // dissolve dari splash
         />
-        <Stack.Screen name="PilihCara" component={PilihCara} />
-        <Stack.Screen name="Reservasi" component={Reservasi} />
+        <Stack.Screen name="Daftar" component={Daftar}
+          options={{ animation: "slide_from_right" }} // push left §3
+        />
+        <Stack.Screen name="Welcome" component={Welcome}
+          options={{ animation: "slide_from_bottom" }} // push up 300 §3
+        />
+        <Stack.Screen name="PilihCara" component={PilihCara}
+          options={{ animation: "fade" }} // dissolve 400 dari Welcome
+        />
+        <Stack.Screen name="Reservasi" component={Reservasi}
+          options={{ animation: "slide_from_right" }} // push left §3
+        />
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Menu" component={Menu} />
+        <Stack.Screen name="Menu" component={Menu}
+          options={{ animation: "slide_from_right" }} // push left §3
+        />
         <Stack.Screen name="Keranjang" component={Keranjang} />
         <Stack.Screen name="Pembayaran" component={Pembayaran} />
         <Stack.Screen name="Profil" component={Profil} />

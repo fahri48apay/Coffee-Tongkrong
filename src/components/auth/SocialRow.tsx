@@ -38,7 +38,13 @@ const PROVIDERS = [
   { name: "Facebook", Logo: FacebookLogo },
 ] as const;
 
-export function SocialRow({ onPick }: { onPick: (name: string) => void }) {
+export function SocialRow({
+  onPick,
+  prefix = "Masuk dengan",
+}: {
+  onPick: (name: string) => void;
+  prefix?: string;
+}) {
   return (
     <View style={styles.row}>
       {PROVIDERS.map(({ name, Logo }) => (
@@ -47,7 +53,7 @@ export function SocialRow({ onPick }: { onPick: (name: string) => void }) {
           onPress={() => onPick(name)}
           style={({ pressed }) => [styles.btn, pressed && styles.pressed]}
           accessibilityRole="button"
-          accessibilityLabel={`Masuk dengan ${name}`}
+          accessibilityLabel={`${prefix} ${name}`}
         >
           <Logo />
           <Text style={styles.label}>{name}</Text>
