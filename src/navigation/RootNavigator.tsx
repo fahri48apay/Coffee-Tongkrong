@@ -54,7 +54,9 @@ export default function RootNavigator() {
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Daftar" component={Daftar} />
-        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Welcome" component={Welcome}
+          options={{ animation: "slide_from_bottom" }} // wiring §3: push up 300
+        />
         <Stack.Screen name="PilihCara" component={PilihCara} />
         <Stack.Screen name="Reservasi" component={Reservasi} />
         <Stack.Screen name="Home" component={Home} />

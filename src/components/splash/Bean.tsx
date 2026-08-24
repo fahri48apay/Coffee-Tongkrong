@@ -69,7 +69,6 @@ function BeanInner({
 
   return (
     <Animated.View
-      pointerEvents="none"
       style={[
         styles.bean,
         { left: x, top: y, width: size, height: size },
@@ -98,7 +97,11 @@ function BeanInner({
 }
 
 const styles = StyleSheet.create({
-  bean: { position: "absolute", zIndex: 1 }, // z1 — di belakang logo ring (z2)
+  bean: {
+    position: "absolute",
+    zIndex: 1, // z1 — di belakang logo ring (z2)
+    pointerEvents: "none",
+  },
   back: { opacity: 0.4 },
 });
 
