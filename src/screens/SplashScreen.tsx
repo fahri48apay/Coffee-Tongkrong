@@ -122,10 +122,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   brandName: {
-    marginTop: 22,
+    marginTop: 26, // Penpot: name y372 − logo bottom 346 = 26 (QA fix, dulu 22 ala demo)
     color: theme.color.textPrimary,
     fontFamily: theme.fontFamily.extrabold,
-    fontSize: 26,
+    fontSize: 28, // Penpot board "brand / name" fs28 w800 (QA fix, dulu 26 ala demo)
+    lineHeight: 34,
     letterSpacing: 0.3,
   },
   // simplifikasi: tanpa italic pada "Tongkrong" — Poppins italic tidak
@@ -136,6 +137,6 @@ const styles = StyleSheet.create({
     fontSize: theme.type.caption.fontSize,
     lineHeight: theme.type.caption.lineHeight,
     color: theme.color.textSecondary,
-    fontFamily: theme.fontFamily.medium,
+    fontFamily: theme.fontFamily.semibold, // Penpot fw600 (QA fix, dulu 500)
   },
 });

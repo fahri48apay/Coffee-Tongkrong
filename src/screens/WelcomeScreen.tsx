@@ -198,13 +198,13 @@ const styles = StyleSheet.create({
     fontSize: 22, lineHeight: 30,
     fontFamily: theme.fontFamily.extrabold,
     color: theme.color.textPrimary,
-    marginTop: theme.space[8], // legacy 44 → snap grid 48
+    marginTop: 36, // Penpot QA fix: title y476 − ring bottom 440 = 36
   },
   subtitle: {
     fontSize: theme.type.label.fontSize,
     lineHeight: theme.type.label.lineHeight,
     color: theme.color.textSecondary,
-    marginTop: theme.space[2],
+    marginTop: 6, // Penpot QA fix: sub y512 − title bottom 506 = 6
     fontFamily: theme.fontFamily.medium,
   },
   loader: {
