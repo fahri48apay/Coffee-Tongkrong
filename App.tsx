@@ -4,6 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import RootNavigator from "./src/navigation/RootNavigator";
+import { CartProvider } from "./src/state/CartContext";
 import { useAppFonts } from "./src/theme/fonts";
 
 // tahan splash native sampai font siap (pola resmi expo-splash-screen)
@@ -21,7 +22,9 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar style="light" />
-      <RootNavigator />
+      <CartProvider>
+        <RootNavigator />
+      </CartProvider>
     </SafeAreaProvider>
   );
 }
